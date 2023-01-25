@@ -12,8 +12,8 @@ public class MyWebConfig implements WebMvcConfigurer {
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		//for window
-		registry.addResourceHandler("/upload/**").
-		addResourceLocations("file:///c:/upload/");
+		//registry.addResourceHandler("/upload/**").
+		//addResourceLocations("file:///c:/upload/");
 		//for linux
 		// putty로 서버 접속후 
 		// mkdir /usr/upload 실행후 
