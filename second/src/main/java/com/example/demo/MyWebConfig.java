@@ -6,6 +6,11 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration //내가 설정클래스파일
 public class MyWebConfig implements WebMvcConfigurer {
+	//for window
+	//static final public String savePath = "c:/upload/";
+	
+	//for linux
+	static final public String savePath = "/usr/upload/";
 
 //	<resources mapping="/upload/**" location="file:///c:/upload/" />
 
