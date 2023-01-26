@@ -10,7 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan(basePackages = {"upload", "board.spring.mybatis"})
 @ComponentScan(basePackages ="spring.mybatis")
 @ComponentScan(basePackages = "websocket")
-
+@ComponentScan(basePackages = "dbsecure")
 
 @MapperScan(basePackages = {"spring.mybatis", "board.spring.mybatis"})
 

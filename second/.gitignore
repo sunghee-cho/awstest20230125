@@ -31,3 +31,8 @@ build/
 
 ### VS Code ###
 .vscode/
+
+#for me
+src/main/java/dbsecure/JasyptDB.java
+src/main/java/dbsecure/JasyptConfig_backup.java
+src/main/resources/application_backup.properties
