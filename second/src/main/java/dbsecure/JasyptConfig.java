@@ -24,17 +24,21 @@ public class JasyptConfig {
     public StringEncryptor stringEncryptor() {
         PooledPBEStringEncryptor encryptor = new PooledPBEStringEncryptor();
         SimpleStringPBEConfig config = new SimpleStringPBEConfig();
-        config.setPassword("1234"); // 암호화 키
         //config.setPassword(environment.getProperty("jasypt.encryptor.password"));
-        //config.setPassword(System.getenv("DB_PASSWORD"));        
-	    config.setAlgorithm("PBEWithMD5AndDES"); // 알고리즘
+        config.setPassword(System.getenv("DB_PASSWORD"));        
+        config.setAlgorithm("PBEWithMD5AndDES"); // 알고리즘
         config.setKeyObtentionIterations("1000");
         config.setPoolSize("1");
         config.setSaltGeneratorClassName("org.jasypt.salt.RandomSaltGenerator");
         config.setStringOutputType("base64");
         encryptor.setConfig(config);
 		System.out.println("===JasyptConfig실행===");
-								
+		System.out.println(System.getenv("DB_PASSWORD") );
+		System.out.println(encryptor.decrypt("rIcw9/ZaeJJUHoxOZ7Ai4jig/TlF4NtyEkf/50Mbu2Q="));
+		System.out.println(encryptor.decrypt("iQ1R36fMUevBcbNS/L6sUNTcFaCNhHxTzbjhoASqBv+sinTkinmeveaGl1CklOibLi9ctdGVeTfoUD8XGXmXHPDiWEsGa7GeEkEm6ImAalpMC+s+6LFDVd7BhmWiFWzJbVrzvzwW1iM="));
+		System.out.println(encryptor.decrypt("6+L7DYODZv66DQbguZ6hzR3JH6C2sX/W"));
+		System.out.println(encryptor.decrypt("j1YiwOW/JS9KBJ5tmWkWN8gJTAh+7rES"));
+						
         return encryptor;
     }
  
